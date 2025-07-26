@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Ronak Sharma</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .projects-section {
+      max-width: 700px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    .project-entry {
+      background-color: #1a1a1a;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .project-entry:last-child {
+      margin-bottom: 4rem;
+    }
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      color: #fff;
+    }
+    .project-header:hover {
+      background-color: #222;
+    }
+    .project-content {
+      padding: 1rem;
+      color: #ccc;
+      display: none;
+      text-align: left;
+    }
+    .project-entry.active .project-content {
+      display: block;
+    }
+    .project-entry.active .project-header i {
+      transform: rotate(180deg);
+    }
+    .project-header i {
+      transition: transform 0.3s ease;
+    }
+    .project-content ul {
+      padding-left: 1.2rem;
+      list-style-type: disc;
+    }
+  </style>
+</head>
+<body class="projects-page">
+  <!-- Welcome Popup -->
+  <div id="welcome-popup" class="popup hidden">
+    <div class="popup-content">
+      <h2>Welcome to my portfolio!</h2>
+      <p>Explore a space where curiosity meets craftsmanship.</p>
+      <button id="close-popup">Enter</button>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>Projects</h1>
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="projects-section">
+      <!-- Portfolio Website -->
+      <div class="project-entry">
+        <div class="project-header">
+          <span>Portfolio Website</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="project-content">
+          <p>A responsive and modular portfolio built using HTML, CSS, and JavaScript.</p>
+          <p>Designed with consistent styling, smooth navigation, and clean layout transitions.</p>
+          <ul>
+            <li>Section-based layout with smooth scrolling</li>
+            <li>Interactive elements and animations</li>
+            <li>Mobile-friendly and optimized for all devices</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Data Visualization Dashboard -->
+      <div class="project-entry">
+        <div class="project-header">
+          <span>Data Visualization Dashboard</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="project-content">
+          <p>An analytics dashboard built using Python, Excel, and visualization libraries like Matplotlib, Seaborn, and Plotly.</p>
+          <p>Focused on clarity, storytelling, and comparative insights across datasets.</p>
+          <ul>
+            <li>Visual analysis of education, population, and infrastructure</li>
+            <li>Pivot tables and structured comparisons</li>
+            <li>Data cleaning and formatting for accuracy</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="main.js" defer></script>
+  <script>
+    document.querySelectorAll(".project-header").forEach(header => {
+      header.addEventListener("click", () => {
+        const entry = header.parentElement;
+        entry.classList.toggle("active");
+      });
+    });
+  </script>
+</body>
+</html>

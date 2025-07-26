@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education | Ronak Sharma</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .edu-section {
+      max-width: 700px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    .edu-entry {
+      background-color: #1a1a1a;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .edu-entry:last-child {
+      margin-bottom: 4rem;
+    }
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      color: #fff;
+    }
+    .edu-header:hover {
+      background-color: #222;
+    }
+    .edu-content {
+      padding: 1rem;
+      color: #ccc;
+      display: none;
+      text-align: left;
+    }
+    .edu-entry.active .edu-content {
+      display: block;
+    }
+    .edu-entry.active .edu-header i {
+      transform: rotate(180deg);
+    }
+    .edu-header i {
+      transition: transform 0.3s ease;
+    }
+    .edu-logo {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      display: block;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+    .edu-content ul {
+      margin-top: 0.5rem;
+      padding-left: 1.2rem;
+      list-style-type: disc;
+    }
+  </style>
+</head>
+<body class="education-page">
+  <!-- Welcome Popup -->
+  <div id="welcome-popup" class="popup hidden">
+    <div class="popup-content">
+      <h2>Welcome to my portfolio!</h2>
+      <p>Explore a space where curiosity meets craftsmanship.</p>
+      <button id="close-popup">Enter</button>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>Education</h1>
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="edu-section">
+      <!-- MNIT Jaipur -->
+      <div class="edu-entry">
+        <div class="edu-header">
+          <span>MNIT Jaipur</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="edu-content">
+          <img src="mnitjaipur_logo.jpg" alt="MNIT Jaipur Logo" class="edu-logo" />
+          <p><strong>Degree:</strong> BTech in Chemical Engineering (Aug 2024 – Nov 2028)</p>
+          <p>I’m currently pursuing a BTech in Chemical Engineering at Malaviya National Institute of Technology Jaipur (MNIT)—one of India’s top-tier engineering institutes known for academic excellence and innovation.</p>
+          <ul>
+            <li>Expanding my technical skill set across Python, data analytics, and web development tools like HTML, CSS, and JavaScript.</li>
+            <li>I thrive in project-based environments, combining creativity with precision.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Cotton University -->
+      <div class="edu-entry">
+        <div class="edu-header">
+          <span>Cotton University</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="edu-content">
+          <img src="cottonuniversitylogo.jpg" alt="Cotton University Logo" class="edu-logo" />
+          <p><strong>Higher Secondary:</strong> Science (Jul 2020 – Oct 2022)</p>
+          <p>I served on the Editorial Board for Devadaaru magazine, contributing to content direction and storytelling.</p>
+          <ul>
+            <li>Communication and leadership experience.</li>
+            <li>Strong academic foundation in science.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="main.js" defer></script>
+<script>
+  document.querySelectorAll(".edu-header").forEach(header => {
+    header.addEventListener("click", () => {
+      const entry = header.parentElement;
+      entry.classList.toggle("active");
+    });
+  });
+</script>
+</body>
+</html>
