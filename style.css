@@ -206,3 +206,14 @@ html, body {
   z-index: -9999;
   pointer-events: none;
 }
+.project-link a {
+  color: var(--text-color);   /* or use your accent variable */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.project-link a:hover {
+  color: var(--accent-color); /* theme highlight */
+  text-decoration: underline;
+}
+ 
