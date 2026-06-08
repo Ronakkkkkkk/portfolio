@@ -54,10 +54,32 @@
       padding-left: 1.2rem;
       list-style-type: disc;
     }
+    
+    /* MATCHED UI LINK STYLES */
+    .project-links {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1.5rem;
+    }
+    .project-links a {
+      color: #fff; /* Matches header text */
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding-bottom: 2px;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+    .project-links a:hover {
+      color: #ccc; /* Soft fallback to match description text */
+      border-color: #ccc; 
+    }
   </style>
 </head>
 <body class="projects-page">
-  <!-- Welcome Popup -->
   <div id="welcome-popup" class="popup hidden">
     <div class="popup-content">
       <h2>Welcome to my portfolio!</h2>
@@ -66,7 +88,6 @@
     </div>
   </div>
 
-  <!-- Header -->
   <header>
     <h1>Projects</h1>
     <nav>
@@ -80,10 +101,65 @@
     </nav>
   </header>
 
-  <!-- Main Content -->
   <main>
     <section class="projects-section">
-      <!-- Portfolio Website -->
+      
+      <div class="project-entry">
+        <div class="project-header">
+          <span>DataBrief</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="project-content">
+          <p>An AI-powered web research and report generation application built using Streamlit, LangChain, and Python, designed to transform natural language prompts into structured, insight-rich research reports.</p>
+          <ul>
+            <li>Designed a prompt-based interface allowing users to input any topic and receive a fully structured research report generated from real-time web data.</li>
+            <li>Implemented an agentic RAG pipeline using LangChain, combining web search and scraping tools to retrieve and process relevant information from the internet.</li>
+            <li>Integrated Tavily API for intelligent web search and BeautifulSoup-based scraping tools to extract and clean contextual information from multiple sources.</li>
+            <li>Utilized LCEL (LangChain Expression Language) to build a modular and composable LLM pipeline for chaining prompt templates, models, and output parsers efficiently.</li>
+            <li>Built a dual-agent system consisting of a search agent and a reader agent, enabling multi-step reasoning and improved information gathering.</li>
+            <li>Leveraged Groq LLM (LLaMA 3.3 70B) to synthesize collected information into structured reports containing introduction, key findings, and conclusion sections.</li>
+            <li>Implemented a writer–critic loop architecture, where a secondary LLM evaluates the generated report for clarity, depth, and factual quality.</li>
+            <li>Enforced source-grounded generation to reduce hallucinations by restricting outputs to retrieved URLs only.</li>
+            <li>Developed a modular and extensible architecture supporting scalable research workflows and future tool integration.</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://databrief.streamlit.app/" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+            <a href="https://github.com/Ronakkkkkkk/multi-agent-ai" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i> GitHub Repo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-entry">
+        <div class="project-header">
+          <span>The Vault</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="project-content">
+          <p>A full-stack movie recommendation and discovery web application built using Streamlit, FastAPI, and Python, designed to deliver personalized cinema insights powered by machine learning and NLP techniques.</p>
+          <ul>
+            <li>Designed an interactive and cinematic UI using Streamlit to enable seamless exploration of movies through search, genres, and trending categories.</li>
+            <li>Implemented a content-based recommendation system using TF-IDF vectorization and cosine similarity, enabling users to discover similar movies based on titles, genres, and keywords.</li>
+            <li>Applied NLP text preprocessing techniques (such as cleaning, normalization, and feature extraction) to improve text representation and recommendation quality.</li>
+            <li>Integrated TMDB API to fetch real-time movie metadata including posters, ratings, descriptions, and popularity trends.</li>
+            <li>Built a scalable backend using FastAPI, deployed on Render, to efficiently serve recommendation and movie data through REST APIs.</li>
+            <li>Utilized pickle-based model persistence to store precomputed similarity matrices and vectorized features for fast inference.</li>
+            <li>Optimized performance using NumPy and Pandas for efficient computation, ensuring low-latency recommendations and smooth user experience.</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://the-vault.streamlit.app" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+            <a href="https://github.com/Ronakkkkkkk/movie-recommendation-system" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i> GitHub Repo
+            </a>
+          </div>
+        </div>
+      </div>
+
       <div class="project-entry">
         <div class="project-header">
           <span>Portfolio Website</span>
@@ -97,15 +173,19 @@
             <li>Developed a fully responsive layout optimized for desktops, tablets, and mobile devices.</li>
             <li>Developed a fully responsive and mobile-friendly website optimized for all devices, with a modular code structure leveraging reusable components and organized code to ensure maintainability and scalability.</li>
           </ul>
-          <p class="project-link">
-  <a href="https://ronakkkkkkk.github.io/portfolio/" 
-     target="_blank" 
-     rel="noopener noreferrer">
-    Link
-</p>
-
+          <div class="project-links">
+            <a href="https://ronakkkkkkk.github.io/portfolio/" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+            <a href="https://github.com/Ronakkkkkkk/portfolio" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i> GitHub Repo
+            </a>
+          </div>
         </div>
       </div>
+
+    </section>
+  </main>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="main.js" defer></script>
