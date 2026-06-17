@@ -103,6 +103,79 @@
 
   <main>
     <section class="projects-section">
+
+      <div class="project-entry">
+  <div class="project-header">
+    <span>Trace Lens</span>
+    <i class="fas fa-chevron-down"></i>
+  </div>
+  <div class="project-content">
+    <p>A real-time distributed tracing system built from scratch — visualizes live request flows across microservices with a D3 force graph and waterfall span view.</p>
+    <ul>
+      <li>Simulates 4 microservices (gateway, auth, orders, inventory) with configurable failure rates.</li>
+      <li>Implemented distributed tracing using shared trace IDs propagated across service calls.</li>
+      <li>Built a custom Prefix Trie for O(k) trace storage and lookup efficiency.</li>
+      <li>Engineered a fixed-size worker thread pool for off-main-thread latency aggregation.</li>
+      <li>Utilized WebSockets for real-time streaming of traces and metrics to the frontend.</li>
+      <li>Visualized service dependencies using a D3.js force-directed graph.</li>
+    </ul>
+    <div class="project-links">
+      <a href="https://trace-lens-mu.vercel.app" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-external-link-alt"></i> Live Demo
+      </a>
+      <a href="https://github.com/Ronakkkkkkk/trace-lens" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i> GitHub Repo
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="project-entry">
+  <div class="project-header">
+    <span>LRU Cache</span>
+    <i class="fas fa-chevron-down"></i>
+  </div>
+  <div class="project-content">
+    <p>A high-performance Least Recently Used (LRU) Cache implementation in C++ achieving O(1) time complexity for get and put operations.</p>
+    <ul>
+      <li>Architected using a hash map for O(1) lookup and a doubly linked list for O(1) eviction tracking.</li>
+      <li>Implemented thread-safe operations using <code>std::mutex</code> to ensure data integrity.</li>
+      <li>Includes comprehensive cache metrics (hits, misses, and hit rate) for performance monitoring.</li>
+      <li>Built with a clean, modular design using CMake for build management.</li>
+      <li>Included a custom benchmarking utility to validate performance requirements.</li>
+      <li>Demonstrates fundamental systems programming concepts: memory management and data structure optimization.</li>
+    </ul>
+    <div class="project-links">
+      <a href="https://github.com/Ronakkkkkkk/lru-cache" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i> GitHub Repo
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="project-entry">
+  <div class="project-header">
+    <span>SBI Nudge</span>
+    <i class="fas fa-chevron-down"></i>
+  </div>
+  <div class="project-content">
+    <p>An intelligent, multi-agent financial personalization engine built with <strong>LangGraph</strong> and <strong>Streamlit</strong>, designed to deliver high-conversion, context-aware nudges.</p>
+    <ul>
+      <li>Implemented a 3-node LangGraph pipeline for automated behavior analysis, RAG-based context retrieval, and LLM-driven message synthesis.</li>
+      <li>Integrated <strong>ChromaDB</strong> and SentenceTransformers to maintain compliance with real-time SBI product guidelines.</li>
+      <li>Engineered logic to handle complex financial profiles, ensuring correct interest rate calculations based on user demographics (Student vs. Senior Citizen).</li>
+      <li>Created a high-fidelity mobile notification simulator within a custom Streamlit dashboard.</li>
+    </ul>
+    <div class="project-links">
+      <a href="https://sbi-nudge.streamlit.app/" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-external-link-alt"></i> Live Demo
+      </a>
+      <a href="https://github.com/Ronakkkkkkk/sbi-nudge" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i> GitHub Repo
+      </a>
+    </div>
+  </div>
+</div>
       
       <div class="project-entry">
         <div class="project-header">
